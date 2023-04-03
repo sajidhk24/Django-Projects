@@ -1,0 +1,41 @@
+#welcome {
+    background: linear-gradient(to right top, #6305dd, #390281);
+    padding: 6rem 12%;
+    display:flex;
+}
+
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color:white;
+
+}
+
+body {
+  margin: 0;
+}
+
+#welcome2 {
+    background:white;
+    padding: 8rem 18%;
+}
+#welcome :hover,
+#welcome :active {
+  color: #cf79f1;
+}
+
+p1,
+p2 {
+    color: #6305dd;
+}
+
+
+li a {
+    color:white;
+}
+
+li {
+    font:'Open Sans', 'Lato';
+    color:white;
+}

@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title></title>
+
+  <script type="text/javascript">
+window.onload=function() {
+var button = document.getElementsByTagName('button')[0];
+button.onclick = function() {newRow();};
+};
+
+function newRow() {
+var tbody = document.getElementsByTagName('tbody')[0];
+var row = tbody.getElementsByTagName('tr')[0];
+var nextRow = row.cloneNode(true);
+nextRow.getElementsByTagName('input')[0].value = '';
+nextRow.getElementsByTagName('input')[1].value = '';
+tbody.appendChild(nextRow);
+nextRow.getElementsByTagName('input')[0].focus();
+}
+</script>
+
+  <style type="text/css">
+* {margin:0;padding:0;}
+</style>
+
+</head>
+<body>
+<?php
+if(isset($_POST['data'])) {
+    echo "foo: "; print_r ($_POST['foo']);
+    echo "<br>bar: "; print_r ($_POST['bar']);
+}
+?>
+<form action="" method="post" name="form1">
+  <table border="0" cellpadding="0" cellspacing="0" summary="">
+    <thead><tr><th>foo</th><th>bar</th></tr></thead>
+    <tfoot><tr><td><button type="button">new row</button></td><td><button type="submit" name="data">submit</button></td></tr></tfoot>
+    <tbody><tr><td><input type="text" name="foo[]"></td><td><input type="text" name="bar[]"></td></tr></tbody>
+  </table>
+</form>
+</body>

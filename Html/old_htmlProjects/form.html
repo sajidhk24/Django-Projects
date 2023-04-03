@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+<div>
+    <h1>Any typical form</h1>
+    <form action="form.py">
+        <input type="text" placeholder="Enter any text">
+        <label for="sectionIDa">
+            <!--        <input type="radio" placeholder="Section">-->
+            <!--        <input type="checkbox" placeholder="Check">-->
+            <input type="radio" value="Section A" name="Sections" id="sectionIDa">Section A
+            <label for="sectionIDb">
+                <input type="radio" value="Section B" name="Sections" id="sectionIDb">Section B
+                <input type="checkbox" name="Select to proceed!" id="process" class="red"> Select to Proceed!<br><br>
+                <textarea name="Explain" id="Why" cols="20" rows="9" placeholder="Explain why you want to proceed!"
+                          style="width: 393px; height: 84px;"></textarea>
+                <select name="Select options" id="options"> Select your options..
+                    <option value="no">Select your options</option>
+                    <option value="Bold">Bold</option>
+                    <option value="Italic">Italic</option>
+                    <option value="Underline">Underline</option>
+                    <option value="Upper">Upper</option>
+     </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% extends "book_outlet/base.html" %}
+{% load static %}
+
+
+{% block title %} All Books {% endblock %}
+
+
+{% block content %}
+
+<section id="welcome">
+    <header>
+<!--    <img src= "{% static 'blog/images/img2.jpg' %}" alt="Sajid - The Author of the Blog"/>-->
+    <h1> Welcome to Book store </h1>
+    </header>
+<!--    <p1 style="color:white"> Hi, I am Sajid and I love to blog </p1><br>-->
+    <br>
+</section>
+<ul>
+
+        {% for book in books %}
+<!--            <li><a href="{% url 'book_detail' book.id%}">{{ book.title }}</a>  (Rating: {{ book.rating }}) </li>-->
+                <li><a href="{{ book.get_absolute_url }}"> {{ book.title }} </a> <div> (Rating: {{ book.rating }}) </div> </li>
+        {% endfor %}
+</ul>
+<hr>
+        <section id="welcome2">
+                <p1> Total Number of Books {{ total_number_of_books }} </p1><br>
+                <p2> Average Rating {{ average_rating.rating__avg }}</p2>
+        </section>
+{% endblock %}

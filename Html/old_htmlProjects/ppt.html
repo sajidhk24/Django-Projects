@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Untitled Document</title>
+</head>
+
+<script type="text/javascript">
+
+function addRow(id)
+{
+var tbody = document.getElementById(id).getElementsByTagName("tbody")[0];
+var row = document.createElement("tr")
+var data1 = document.createElement("td")
+data1.appendChild(document.createTextNode("Column1"))
+var data2 = document.createElement("td")
+data2.appendChild (document.createTextNode("Column2"))
+row.appendChild(data1);
+row.appendChild(data2);
+tbody.appendChild(row);
+}
+</script>
+
+<table id="table" cellspacing="0" border="1">
+  <tbody>
+  <tr>
+    <td><input type='text'/></td><td><input type='text'/></td>
+  </tr>
+  <tr>
+    <td><input type='text'/></td><td><input type='text'/></td>
+  </tr>
+  <tr>
+    <td><input type='text'/></td><td><input type='text'/></td>
+  </tr>
+  <tr>
+    <td><input type='text'/></td><td><input type='text'/></td>
+  </tr>
+  <tr>
+    <td><input type='text'/></td><td><input type='text'/></td>
+  </tr>
+  <tr>
+    <td><input type='text'/></td><td><input type='text'/></td>
+  </tr>
+  <tr>
+    <td><input type='text'/></td><td><input type='text'/></td>
+  </tr>
+  </tr>
+  </tbody>
+</table><button onclick="javascript:addRow('table')">Add row</button>
+</html>
+
+<body>
+</body>

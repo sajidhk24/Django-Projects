@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title_name %}
+    {{ month }}
+{% endblock %}
+
+{% block contents %}
+{% include "header.html" %}
+    <h1> {{text|title}} </h1>
+{% endblock %}
